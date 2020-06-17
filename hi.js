@@ -218,3 +218,8 @@ function onMouseLeave() {
   pointerY = null;
 
 }
+function calculateDistance(){
+  var depart = document.getElementById("departure").value;
+  var dest = document.getElementById("dest").value;
+  alert("You are going from: " + depart + " to " + dest);
+}

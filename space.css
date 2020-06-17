@@ -24,6 +24,7 @@
 	height: 100vh;
 	transform-style: preserve-3d;
 	perspective: 2000px;
+	z-index: -1;
   }
   
   .circle {

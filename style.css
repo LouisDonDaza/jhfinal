@@ -11,21 +11,34 @@ p {
   font-family: verdana;
   font-size: 20px;
 }
+#tagline {
+  text-align: center; 
+  font-size: 100; 
+  color: orange;
+  display: block;
+  margin-bottom: 5px;
+}
 .form--ui {
   position: absolute;
-  top: 17%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: orange;
 }
-.depart--form input{
-  color: blue;
+.form--ui p {
+  font-size: 18px;
+}
+.depart--form input {
+  padding: 2px;
 }
 .depart--form label {
   display: inline-block;
+  font-size: 20px;
+  margin: 3px;
 }
 .submit--form {
   background-color: snow;
-  color: red;
   padding: 10px 20px;
   border: 10%;
+  margin-left: 20px;
 }
