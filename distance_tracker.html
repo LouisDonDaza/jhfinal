@@ -62,19 +62,15 @@
 
     <body>
 
-        <h1 style = "text-align: center; font-size: 100; color: orange;"Distance between the two countries</h1>
+        <h2 style = "text-align: center; font-size: 100; color: orange;">Distance between the two countries</h2>
 
-        <form>
-            <label>Point of Departure:</label><br>
-            <input type="text" id="countries"><br>
+        <form action="/distance_tracker.html" method = "post">
+            <input type="text" placeholder="Point of Departure"><br>
             <label for="lname">Destination:</label><br>
-            <input type="text" id="countries"><br><br>
+            <input type="text" placeholder="Destination"><br>
+
             <input type="submit" value="Submit">
           </form> 
-          
-          <p>If you click the "Submit" button, the distance between the two countries will be calculated".</p>
-          
-          </body>
 
         <style>
           .earth{
