@@ -9,83 +9,19 @@
     <title>Distance Tracker</title>
 
     <style>
-        h2 {font-size: 50px;}
-        .button {
-          border-radius: 4px;
-          background-color: #69C0F9;
-          border: none;
-          color: #FFFFFF;
-          text-align: center;
-          font-size: 25px;
-          padding: 20px;
-          width: 200px;
-          transition: all 0.5s;
-          cursor: pointer;
-          margin: 5px;
-        }
-        
-        .button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-        }
-        
-        .button span:after {
-          content: '\00bb';
-          position: absolute;
-          opacity: 0;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-        }
-        
-        .button:hover span {
-          padding-right: 25px;
-        }
-        
-        .button:hover span:after {
-          opacity: 1;
-          right: 0;
-        }
-
-        table.soap {
-          border-spacing: 2em;
-        }
-        table.soap td{
-          margin: 20px 20px 20px 20px;
-          padding: 20px 20px 20px 20px;
-        }
-        
-    </style>
-    </head>
-
-    <body>
-
-        <h2 style = "text-align: center; font-size: 100; color: orange;">Distance between the two countries</h2>
-
-        <form action="/distance.html" method = "post">
-            <input type="text" placeholder="Point of Departure"><br>
-            <label for="lname">Destination:</label><br>
-            <input type="text" placeholder="Destination"><br>
-
-            <input type="submit" value="Submit">
-          </form> 
-
-        <style>
-          .earth{
+        .earth{
               position:absolute;
               top:0;
               bottom:0;
               left:0;
               right:0;
               margin:auto;
-              width:300px;
-              height:300px;
+              width:350px;
+              height:350px;
               background-image:url(https://1.bp.blogspot.com/-ljMO9Dwy1rA/UcsNGwrqBPI/AAAAAAAAMn4/mpWtA6vOvKg/s1600/new+global+view.jpeg);
               border-radius:50%;
               background-size:cover;
-              box-shadow:-20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+              box-shadow:-20px -20px 50px 2px #000 inset, 0 0 20px 2px #fff;
               animation:spin 30s linear alternate infinite;
               z-index:2;
           }
@@ -93,9 +29,25 @@
           @keyframes spin{
               100%{background-position:100%;}
           }
-        </style>
+        
+    </style>
+    </head>
+
+    <body>
+
+        <div class="form--ui">
+          <h1 id="tagline">Distance Tracker</h1>
+          <form class="depart--form" onsubmit="event.preventDefault(); calculateDistance();">
+            <label for="departure">Point of Departure:</label>
+            <input type="text" id="departure" name="departure">
+            <label for="dest">Destination:</label>
+            <input type="text" id="dest" name="dest">
+            <input type="submit" value="Submit" class="submit--form">
+        </form> 
+          
+          <p>If you click the "Submit" button, the distance between the two countries will be calculated.</p>
+        </div>
         <div class = "earth"></div>
-        <h1 style = "text-align: center; font-size: 100; color: orange;" id="tagline">Distance Tracker</h1>
         <div class="container">
           <div class="wrapper">
             <div class="circle"></div>
