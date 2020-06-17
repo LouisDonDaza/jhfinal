@@ -11,3 +11,21 @@ p {
   font-family: verdana;
   font-size: 20px;
 }
+.form--ui {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.depart--form input{
+  color: blue;
+}
+.depart--form label {
+  display: inline-block;
+}
+.submit--form {
+  background-color: snow;
+  color: black;
+  padding: 10px 20px;
+  border: 10%;
+}
