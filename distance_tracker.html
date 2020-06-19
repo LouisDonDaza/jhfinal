@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,6 +5,7 @@
         <link href="style.css" rel="stylesheet">
         <link href="space.css" rel="stylesheet">
         <script src="hi.js"></script>
+        <script src="country.js"></script>
     <title>Distance Tracker</title>
 
     <style>
@@ -37,11 +37,11 @@
 
         <div class="form--ui">
           <h1 id="tagline">Distance Tracker</h1>
-          <form class="depart--form" onsubmit="event.preventDefault(); calculateDistance();">
+          <form class="depart--form" action="action_page.php" onsubmit="event.preventDefault(); calculateDistance();">
             <label for="departure">Point of Departure:</label>
-            <input type="text" id="departure" name="departure">
+            <input type="text" id="departure" name="departure" value="<?php echo $departure;?>">
             <label for="dest">Destination:</label>
-            <input type="text" id="dest" name="dest">
+            <input type="text" id="dest" name="dest" value="<?php echo $dest;?>">
             <input type="submit" value="Submit" class="submit--form">
         </form> 
           

@@ -1,0 +1,33 @@
+.airplane{
+    top: 180px;
+    left:40%;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .flame{
+    top: -40px;
+    left: 150px;
+    height: 10px;
+    width:60px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #ffffff;
+    animation: flame 0.3s linear infinite;
+     z-index: -1;
+  }
+  .flame2{
+    top: -195px;
+    left: 115px;
+  }
+  @keyframes flame{
+    0%{
+      transform: translateX(0%);
+    }
+    50%{
+      transform: translateX(50%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+  }
