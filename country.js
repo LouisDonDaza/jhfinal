@@ -218,6 +218,8 @@ function onMouseLeave() {
   pointerY = null;
 
 }
+
+/* Haversine formula - https://www.movable-type.co.uk/scripts/latlong.html?fbclid=IwAR2IRNZaMTNivLPxw36AOCOtd-wbD3Wu7MVhI6PsoA_DfPZrtHpMZrsASvk */
 function calculateDistance(){
   Number.prototype.toRad = function() {
     return this * Math.PI / 180;
@@ -236,7 +238,7 @@ function calculateDistance(){
   var R = 6371; // km 
 //has a problem with the .toRad() method below.
 var x1 = lat2-lat1;
-var dLat = x1.toRad();  
+var dLat = x1.toRad();
 var x2 = lon2-lon1;
 var dLon = x2.toRad();  
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 

@@ -13,17 +13,18 @@ p {
 }
 #tagline {
   text-align: center; 
-  font-size: 100; 
-  color: orange;
+  font-size: 60px; 
+  color: rgb(10, 202, 177);
   display: block;
   margin-bottom: 5px;
 }
 .form--ui {
+  text-align: center;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: orange;
+  color: whitesmoke;
 }
 .form--ui p {
   font-size: 18px;
@@ -40,6 +41,6 @@ p {
 .submit--form {
   background-color: snow;
   padding: 10px 20px;
-  border: 10%;
+  border: 5%;
   margin-left: 20px;
 }
