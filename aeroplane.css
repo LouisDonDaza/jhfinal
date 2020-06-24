@@ -1,0 +1,102 @@
+/* Tweaked the design with reference to the link https://www.youtube.com/watch?v=AgeuEPnIzz0 */
+
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    background: #00415a;
+}
+.box
+{
+    position: relative;
+    left: 250px;
+    width: 325px;
+    height: 325px;
+    background: linear-gradient(#6ab9ff,#0090d2);
+    border-radius: 50%;
+    background-size:cover;
+    box-shadow:-20px -20px 50px 2px #fff inset, 0 0 20px 2px #fff;
+    overflow: hidden;
+}
+.plane
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate-plane 1s linear infinite;
+}
+.plane img
+{
+    position: relative;
+    z-index: 3;
+}
+@keyframes animate-plane
+{
+    0%
+    {
+        transform: translate(2px,2px);
+    }
+    50%
+    {
+        transform: translate(-2px,-2px);
+    }
+    100%
+    {
+        transform: translate(2px,2px);
+    }
+}
+.cloud
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.cloud img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    z-index: 2;
+    animation: animate-cloud 1s linear infinite;
+}
+@keyframes animate-cloud
+{
+    0%
+    {
+        transform: translateX(400px);
+    }
+    40%,100%
+    {
+        transform: translate(-400px);
+    }
+}
+.cloud img:nth-child(1)
+{
+    top: 50px;
+    animation-delay: -2s;
+    animation: animate-cloud 1.25s linear infinite;
+}
+.cloud img:nth-child(2)
+{
+    top: 180px;
+    animation-delay: -1s;
+    animation: animate-cloud 1s linear infinite;
+}
+.cloud img:nth-child(3)
+{
+    top: 50px;
+    animation-delay: -2.5s;
+    animation: animate-cloud .75s linear infinite;
+}
