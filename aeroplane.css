@@ -13,9 +13,10 @@ body
 .box
 {
     position: relative;
-    left: 250px;
+    left: 300px;
     width: 325px;
     height: 325px;
+    top: 50px;
     background: linear-gradient(#6ab9ff,#0090d2);
     border-radius: 50%;
     background-size:cover;

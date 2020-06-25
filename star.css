@@ -1,11 +1,8 @@
+/* Tweaked the design with reference to the link - https://www.youtube.com/watch?v=25npMh1hzi8 */
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
-<<<<<<< HEAD
-*
-{
-=======
 
 * {
->>>>>>> 95864bf45485e5f4671e5fd67acdb7aac98912e9
     margin: 0;
     padding: 0;
     box-sizing: border-box;

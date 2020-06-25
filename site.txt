@@ -1,5 +1,0 @@
-https://codesandbox.io/s/LgBN3qy5j
-
-https://www.npmjs.com/package/iso3166-2-db
-
-https://www.maxmind.com/en/accounts/337657/geoip/downloads
