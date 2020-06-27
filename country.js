@@ -236,7 +236,7 @@ function calculateDistance(){
   let lon2 = Number(dest[1]);
   console.log('first', depart[0], lon1, ' second', lat2, lon2);
   var R = 6371; // km 
-//has a problem with the .toRad() method below.
+
 var x1 = lat2-lat1;
 var dLat = x1.toRad();
 var x2 = lon2-lon1;
@@ -248,7 +248,7 @@ var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 var d = R * c;
 
 let msg = document.getElementById('form--msg');
-msg.innerText = 'The distance between the two countries is ' + d.toFixed(0) + ' km.';
+msg.innerText = 'The distance between two countries is ' + d.toFixed(0) + ' km.';
 }
 function calcDistance(){
   var depart = document.getElementById("departure").value;
@@ -260,7 +260,7 @@ function calcDistance(){
   let lon2 = Number(dest[1]);
 
 var R = 6371; // km 
-//has a problem with the .toRad() method below.
+
 var x1 = lat2-lat1;
 var dLat = x1 * Math.PI/180;  
 var x2 = lon2-lon1;
@@ -270,74 +270,6 @@ var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 var d = R * c; 
-  /*
-  const R = 6371e3; // metres
-  const sig1 = lat1 * Math.PI/180; // φ, λ in radians
-  const sig2 = lat2 * Math.PI/180;
-  const omega1 = (lat2-lat1) * Math.PI/180;
-  const omega2 = (lon2-lon1) * Math.PI/180;
-
-  const a = Math.sin(omega1/2) * Math.sin(omega1/2) +
-          Math.cos(sig1) * Math.cos(sig2) *
-          Math.sin(omega2/2) * Math.sin(omega2/2);
-  //const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  const c = 2 * Math.asin(Math.sqrt(a));
-
-  //const d = Math.acos( Math.sin(sig1)*Math.sin(sig2) + Math.cos(sig1)*Math.cos(sig2) * Math.cos(omega2) ) * R;
-  const d = R * c; // in metres
-  */
- /*
-  const R = 6371e3;
-  let dlon = lon2 - lon1;
-  let dlat = lat2 - lat1;
-  const a = (Math.pow(Math.sin(dlat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * (Math.pow(Math.sin(dlon/2),2)));
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  const d = R * c;
-  */
 
   console.log("Distance between these two countries is: " + d.toFixed(0) + " m.");
 }
-/*
-const rad: number[] = args.map((deg: number) => deg / 180.0 * Math.PI);
-        const lat1: number = rad[0];
-        const lon1: number = rad[1];
-        const lat2: number = rad[2];
-        const lon2: number = rad[3];
-        const R: number = 6372.8;
-        const dLat: number = lat2 - lat1;
-        const dLon: number = lon2 - lon1;
-
-        const a: number = Math.sin(dLat / 2) *
-            Math.sin(dLat / 2) +
-            Math.sin(dLon / 2) *
-            Math.sin(dLon / 2) *
-            Math.cos(lat1) *
-            Math.cos(lat2);
-
-        const c: number = 2 * Math.asin(Math.sqrt(a));
-
-        return R * c;
-*/
-/*
-Number.prototype.toRad = function() {
-   return this * Math.PI / 180;
-}
-
-var lat1 = 42.546245; 
-var lon1 = 1.601554; 
-var lat2 = 23.424076; 
-var lon2 = 53.847818; 
-
-var R = 6371; // km 
-//has a problem with the .toRad() method below.
-var x1 = lat2-lat1;
-var dLat = x1.toRad();  
-var x2 = lon2-lon1;
-var dLon = x2.toRad();  
-var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
-                Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
-                Math.sin(dLon/2) * Math.sin(dLon/2);  
-var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c;
-console.log(d);
-*/

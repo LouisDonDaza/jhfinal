@@ -16,7 +16,7 @@ body
     left: 16vw;
     width: 325px;
     height: 325px;
-    top: 50px;
+    top: 52px;
     background: linear-gradient(#6ab9ff,#0090d2);
     border-radius: 50%;
     background-size:cover;
@@ -106,26 +106,26 @@ body
 
 @media only screen and (max-width: 670px) {
     .box {
-        top: 50px;
+        top: 100px;
         left: 10vw;
-      width: 30vw;
+        width: 30vw;
         height:30vw; }
     .plane img{
         height: 15vw;
-    width: auto} 
+        width: auto} 
     .cloud img {
         height: 5vw;
         width: auto;
     }}
     @media only screen and (max-width: 780px) {
         .box {
-            top: 40px;
+            top: 150px;
             left: 10vw;
-          width: 30vw;
+            width: 30vw;
             height:30vw; }
         .plane img{
             height: 15vw;
-        width: auto} 
+            width: auto} 
         .cloud img {
             height: 5vw;
             width: auto;
