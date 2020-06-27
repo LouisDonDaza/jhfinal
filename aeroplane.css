@@ -13,7 +13,7 @@ body
 .box
 {
     position: relative;
-    left: 300px;
+    left: 16vw;
     width: 325px;
     height: 325px;
     top: 50px;
@@ -36,6 +36,7 @@ body
     align-items: center;
     animation: animate-plane 1s linear infinite;
 }
+
 .plane img
 {
     position: relative;
@@ -102,3 +103,30 @@ body
     animation-delay: -2.5s;
     animation: animate-cloud .75s linear infinite;
 }
+
+@media only screen and (max-width: 670px) {
+    .box {
+        top: 20px;
+        left: 10vw;
+      width: 30vw;
+        height:30vw; }
+    .plane img{
+        height: 15vw;
+    width: auto} 
+    .cloud img {
+        height: 5vw;
+        width: auto;
+    }}
+    @media only screen and (max-width: 780px) {
+        .box {
+            top: 20px;
+            left: 10vw;
+          width: 30vw;
+            height:30vw; }
+        .plane img{
+            height: 15vw;
+        width: auto} 
+        .cloud img {
+            height: 5vw;
+            width: auto;
+        }}

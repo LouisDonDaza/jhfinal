@@ -27,10 +27,11 @@ p {
   transform: translate(-50%, -50%);
   color: whitesmoke;
   z-index: 2;
+
 }
 .form--ui p {
   font-size: 18px;
-  min-width: 850px;
+  max-width: 850px;
 }
 .depart--form input {
   padding: 2px;
@@ -46,3 +47,12 @@ p {
   border: 5%;
   margin-left: 20px;
 }
+@media only screen and (max-width: 670px) {
+  .form--ui {
+    top: 20%;
+  }
+  #tagline{
+    font-size:24px; } }
+    @media only screen and (max-width: 780px) {
+      #tagline{
+        font-size:28px; } }
